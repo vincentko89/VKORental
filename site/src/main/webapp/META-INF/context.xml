@@ -17,10 +17,8 @@
               logAbandoned="true"
               minEvictableIdleTimeMillis="30000"
               jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
-              username="${database.user}"
-              password="${database.password}"
-              driverClassName="${database.driver}"
-              url="${database.url}"/>
+              driverClassName="net.sourceforge.jtds.jdbc.Driver"
+              url="jdbc:jtds:sqlserver://VINCENTPC:1433/VOANRental;useNTLMv2=true;domain=VincentPC"/>
 
     <Resource name="jdbc/storage"
               auth="Container"
@@ -39,10 +37,8 @@
               logAbandoned="true"
               minEvictableIdleTimeMillis="30000"
               jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
-              username="${database.user}"
-              password="${database.password}"
-              driverClassName="${database.driver}"
-              url="${database.url}"/>
+              driverClassName="net.sourceforge.jtds.jdbc.Driver"
+              url="jdbc:jtds:sqlserver://VINCENTPC:1433/VOANRental;useNTLMv2=true;domain=VincentPC"/>
 
     <Resource name="jdbc/secure"
               auth="Container"
@@ -61,8 +57,6 @@
               logAbandoned="true"
               minEvictableIdleTimeMillis="30000"
               jdbcInterceptors="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState;org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
-              username="${database.user}"
-              password="${database.password}"
-              driverClassName="${database.driver}"
-              url="${database.url}"/>
+              driverClassName="net.sourceforge.jtds.jdbc.Driver"
+              url="jdbc:jtds:sqlserver://VINCENTPC:1433/VOANRental;useNTLMv2=true;domain=VincentPC"/>
 </Context>

@@ -35,6 +35,15 @@
             </artifact:mvn>
         </target>
 
+	<target name="tomcat-demo" depends="start-db">
+	    <delete dir="war/WEB-INF/lib"/>
+	    <artifact:mvn mavenHome="${maven.home}" fork="true" jvmargs="-DbroadleafCoreDirectory=${broadleafCoreDirectory} -DbroadleafWorkspaceDirectory=${broadleafWorkspaceDirectory} -XX:MaxPermSize=256M -Xmx1024M">
+	        <arg value="compile"/>
+	        <arg value="war:exploded"/>
+	        <arg value="tomcat7:run-war"/>
+	    </artifact:mvn>
+	</target>
+	
     <target name="jetty-demo" depends="start-db">
         <delete dir="war/WEB-INF/lib"/>
         <artifact:mvn mavenHome="${maven.home}" fork="true">
